@@ -1,1 +1,1 @@
-technical issues 
+exit 0
