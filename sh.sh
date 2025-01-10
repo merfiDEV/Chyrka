@@ -10,5 +10,4 @@ bash --version | head -n 1
 echo "[Bash Checked]"
 sleep 1
 echo "[Successful Launch]"
-python /storage/emulated/0/Logs/отходняк.py
 exit 0
