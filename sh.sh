@@ -1,5 +1,4 @@
-#!/bin/bash
-# Этот скрипт выводит сообщение об успешном запуске
+
 echo "[Init Python..]"
 sleep 2
 python3 --version
