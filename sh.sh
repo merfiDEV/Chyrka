@@ -1,3 +1,8 @@
+if [ "$(id -u)" -eq 0 ]; then
+    echo "Root access detected! ✅"
+else
+    echo "No root access! ❌"
+fi
 clear
 echo "[Init Python..]"
 sleep 2
