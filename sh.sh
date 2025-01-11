@@ -3,6 +3,7 @@ if [ "$(id -u)" -eq 0 ]; then
 else
     echo "No root access! ❌"
 fi
+sleep 3
 clear
 echo "[Init Python..]"
 sleep 2
