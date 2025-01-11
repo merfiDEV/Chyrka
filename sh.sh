@@ -1,5 +1,12 @@
 clear
 echo "[DEBUG]"
+ANDROID_VERSION=$(getprop ro.build.version.release)
+
+if [ -n "$ANDROID_VERSION" ]; then
+    echo "[ANDROID=$ANDROID_VERSION]"
+else
+    echo "[ANDROID=Unknown]"
+fi
 if [ "$(id -u)" -eq 0 ]; then
     echo "Root access detected! ✅"
 else
