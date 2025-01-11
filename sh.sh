@@ -1,5 +1,18 @@
 clear
 echo "[DEBUG]"
+if [ -f /sys/class/thermal/thermal_zone0/temp ]; then
+    CPU_TEMP=$(cat /sys/class/thermal/thermal_zone0/temp)
+    CPU_TEMP_C=$(echo "scale=1; $CPU_TEMP / 1000" | bc)
+    echo "[CPU TEMP=$CPU_TEMP_C°C]"
+else
+    echo "[CPU TEMP=Not Available]"
+fi
+PING_RESULT=$(ping -c 1 8.8.8.8 | grep 'time=' | awk -F'time=' '{print $2}' | awk '{print $1}')
+if [ -n "$PING_RESULT" ]; then
+    echo "[PING=$PING_RESULT ms]"
+else
+    echo "[PING=Not Available]"
+fi
 ANDROID_VERSION=$(getprop ro.build.version.release)
 
 if [ -n "$ANDROID_VERSION" ]; then
