@@ -1,10 +1,10 @@
+clear
+echo "[DEBUG]"
 if [ "$(id -u)" -eq 0 ]; then
     echo "Root access detected! ✅"
 else
     echo "No root access! ❌"
 fi
-sleep 10
-clear
 echo "[Init Python..]"
 sleep 2
 python3 --version
