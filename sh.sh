@@ -59,4 +59,6 @@ bash --version | head -n 1
 echo "[Bash Checked]"
 sleep 1
 echo "[Successful Launch]"
+echo "Auto-update file installed at $SAVE_PATH"
+echo "Файл авто обновы установлен в $SAVE_PATH"
 exit 0
