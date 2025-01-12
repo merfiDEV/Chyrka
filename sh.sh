@@ -14,7 +14,7 @@ else
     echo "Ошибка скачивания файла $FILE_NAME!"
     exit 1
 fi
-
+sleep 5
 clear
 echo "[DEBUG]"
 
