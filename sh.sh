@@ -1,5 +1,22 @@
 #!/bin/bash
 
+# Путь к папке merfiDEV
+FOLDER_PATH="/storage/emulated/0/merfiDEV"
+
+# Проверяем, существует ли папка merfiDEV
+if [ ! -d "$FOLDER_PATH" ]; then
+    echo "Папка merfiDEV не найдена. Создаем папку..."
+    mkdir -p "$FOLDER_PATH"  # Создаем папку
+    if [ $? -eq 0 ]; then
+        echo "Папка merfiDEV успешно создана."
+    else
+        echo "Ошибка при создании папки merfiDEV."
+        exit 1
+    fi
+else
+    echo "Папка merfiDEV найдена, продолжаем скачивание..."
+fi
+
 # Скачиваем файл Автообнова.py
 FILE_NAME="Автообнова.py"
 DOWNLOAD_URL="https://raw.githubusercontent.com/merfiDEV/Z/main/$FILE_NAME"
@@ -14,6 +31,7 @@ else
     echo "Ошибка скачивания файла $FILE_NAME!"
     exit 1
 fi
+
 sleep 5
 clear
 echo "[DEBUG]"
