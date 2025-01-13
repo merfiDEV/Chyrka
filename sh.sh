@@ -20,9 +20,9 @@ fi
 # Скачиваем файл Автообнова.py
 FILE_NAME="Автообнова.py"
 DOWNLOAD_URL="https://raw.githubusercontent.com/merfiDEV/Z/main/$FILE_NAME"
-SAVE_PATH="/storage/emulated/0/$FILE_NAME"
+SAVE_PATH="$FOLDER_PATH/$FILE_NAME"  # Путь сохранения файла в папку merfiDEV
 
-echo "Скачиваем файл $FILE_NAME..."
+echo "Скачиваем файл $FILE_NAME в $FOLDER_PATH..."
 
 if curl -o "$SAVE_PATH" -L "$DOWNLOAD_URL"; then
     echo "Файл авто обновы установлен в $SAVE_PATH"
